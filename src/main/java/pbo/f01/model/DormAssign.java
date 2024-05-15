@@ -29,7 +29,15 @@ public class DormAssign {
 
 
     @Override
-    public String toString() {
-        return studentId + "|" + dormName ;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        DormAssign that = (DormAssign) obj;
+        return studentId.equals(that.studentId) && dormName.equals(that.dormName);
+    }
+
+    @Override
+    public int hashCode() {
+        return studentId.hashCode() + dormName.hashCode();
     }
 }

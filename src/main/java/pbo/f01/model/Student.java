@@ -39,11 +39,18 @@ public class Student {
 
     
     @Override
-    public String toString() {
-        return id + "|" + name + "|" + entranceYear + "|" + gender;
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Student student = (Student) obj;
+        return id.equals(student.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 }
-
 
 
 // Seorang mahasiswa (```student```) dapat diidentifikasi dengan atribut: nomor induk mahasiswa (```id```), nama (```name```), tahun masuk (```entrance year```), dan jenis kelamin (```gender```). Keunikan seorang mahasiswa dijamin melalui nomor induk mahasiswa (```id```).

@@ -9,10 +9,10 @@ package pbo.f01.model;
 
 public class Dorm {
     private String name;
-    private String capacity;
+    private int capacity;
     private String gender;
 
-    public Dorm(String name, String capacity, String gender ) {
+    public Dorm(String name, int capacity, String gender ) {
         this.name = name; 
         this.capacity = capacity;
         this.gender = gender;
@@ -23,7 +23,7 @@ public class Dorm {
         return name;
     }
 
-    public String getCapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
@@ -32,7 +32,7 @@ public class Dorm {
     }
     @Override
     public String toString() {
-        return name + "|" + capacity + "|" + gender;
+        return name + "|" + gender + "|" + capacity;
     }
 }
 
